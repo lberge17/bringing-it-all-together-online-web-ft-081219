@@ -62,7 +62,8 @@ class Dog
     if dog.empty?
       self.create(name:, breed:)
     else
-      id = dog[0]
+      dog_attributes = dog[0]
+      
   end
   
   def self.find_by_name
