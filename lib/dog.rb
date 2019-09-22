@@ -53,8 +53,8 @@ class Dog
     self.new_from_db(row)
   end
   
-  def self.find_or_create_by(attribute)
-    
+  def self.find_or_create_by(attribute_hash)
+    self.create(attribute_hash)
   end
   
   def self.find_by_name
