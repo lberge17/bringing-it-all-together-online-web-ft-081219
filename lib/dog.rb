@@ -65,7 +65,7 @@ class Dog
       dog_data = dog[0]
       dog = self.new(name: dog_data[1], breed: dog_data[2], id: dog_data[0])
     end
-    dod
+    dog
   end
   
   def self.find_by_name
