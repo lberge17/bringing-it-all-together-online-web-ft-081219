@@ -18,13 +18,7 @@ class Dog
   end
   
   def self.drop_table
-    sql = <<-SQL
-      DROP TABLE IF EXISTS dogs (
-      id INTEGER PRIMARY KEY,
-      name TEXT,
-      breed TEXT)
-      SQL
-    DB[:conn].execute(sql)
+    DB[:conn].execute("DROP TABLE IF EXISTS dogs;")
   end
   
   def save
