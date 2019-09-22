@@ -42,6 +42,8 @@ class Dog
   
   def self.new_from_db
     
+    
+    #returns an array of dog data
   end
   
   def self.find_by_id
