@@ -30,7 +30,8 @@ class Dog
       self.update
     else
       DB[:conn].execute(sql, self.name, self.breed)
-      @id = DB[:conn].execute("")
+      @id = DB[:conn].execute("SELECT last_insert_rowid() FROM songs")[0][0]
+    end
   end
   
   def self.create
@@ -54,7 +55,10 @@ class Dog
   end
   
   def update
-    
+    sql = <<-SQL
+      UPDATE dogs SET name = ?, breed = ?
+      WHERE id = ?
+      SQL
   end
   
 end
