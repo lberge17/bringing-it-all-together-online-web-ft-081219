@@ -22,8 +22,11 @@ class Dog
   end
   
   def save
-    dog = Dog.new()
-    dog
+    sql = <<-SQL
+      INSERT INTO dogs (name, breed)
+      VALUES (?, ?)
+      SQL
+    
   end
   
   def self.create
