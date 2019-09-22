@@ -73,7 +73,8 @@ class Dog
       SELECT * FROM dogs
       WHERE name = ?
       SQL
-    DB[:conn].execute(sql, name)
+    row = DB[:conn].execute(sql, name)[0]
+    self.find_or_create_by(name: row[1], breed: row[2])
   end
   
   def update
