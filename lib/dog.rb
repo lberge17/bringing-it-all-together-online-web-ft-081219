@@ -22,7 +22,8 @@ class Dog
   end
   
   def save
-    
+    dog = Dog.new()
+    dog
   end
   
   def self.create
